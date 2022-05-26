@@ -1,2 +1,2 @@
-# C++ Repository
+# C++ Practice
 C++ Studies
