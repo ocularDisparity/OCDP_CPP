@@ -68,15 +68,15 @@ void setDesc(string description) {
 
 // getters
 string getname() {
-	return this.name;
+	return name;
 }
 
 int getnumber() {
-	return this.itemNo;
+	return itemNo;
 }
 
 string getdesc() {
-	return this.description;
+	return description;
 }
 
 #endif
