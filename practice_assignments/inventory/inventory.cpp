@@ -1,6 +1,6 @@
 #include<iostream>
-#include<cll.h>
-#include<item.h>
+#include "item.h"
+#include "cll.h"
 
 /*	PROGRAM DESCRIPTION:
  *	An extremely rudimentary inventory system.
@@ -9,8 +9,12 @@
  *	The inventory system is a circular linked list.
  */
 
+
+
 int main() {
-	item testItem(;
+	std::cout<<"Compilation success\n";
+	
+	
 	
 	return 0;
 }

@@ -1,10 +1,10 @@
 /* Throwing in an obligatory classic. */
 
-#include <iostream>
+#include<iostream>
 //using namespace std;
 
 int main() {
- std::cout << "Hello world!";
+ std::cout << "Hello world!\n";
   
   return 0;
 }

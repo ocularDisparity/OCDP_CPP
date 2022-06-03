@@ -1,11 +1,11 @@
-#ifndef ITEM.H
-#define ITEM.H
-#include<node.h>
+#ifndef ITEM_H
+#define ITEM_H
 #include<string>
 
 /*	HEADER DESCRIPTION:
  *	No two items must use the same item number.
  *	They can share the same name and description, but each item number must be unique.
+ *	They can be missing a name or description (or both), but each item must have its own number.
  *	Every item must go in the inventory. No item can be withheld from the inventory.
  */
  
@@ -17,66 +17,101 @@
 
 class item {
 	private:
-		string name;
+		// member variables
+		std::string name;
 		int itemNo;
-		string description;
+		std::string description;
+		
 	public:
 		// constructors
-		item(string name);
-		item(string name, int itemNo);
-		item(string name, int itemNo, string description);
+		item(int);
+		item(std::string, int); // name, no description
+		item(int, std::string); // description, no name
+		item(std::string, int, std::string);
+		
 		// setters
-		void setName();
-		void setNum();
-		void setDesc();
+		void setName(std::string);
+		void setNum(int);
+		void setDesc(std::string);
+		
 		// getters
-		string getname();
-		int getnumber();
-		string getdesc();
+		std::string getName();
+		int getNumber();
+		std::string getDesc();
 };
 
-// constructors
-item::item(string name) {
-	this.name = name;
+// KEEP IT SIMPLE, STUPID
+/*
+// member functions
+bool makeItem(int itemNo, cllnode inventory) {
+	cllnode currentNode = inventory;
+	int count = inventory.size();
+	
+	bool noDuplicate = true;
+	
+	while (count != 0) {
+		if (currentNode.content.getnumber() != itemNo) {
+			throw "Duplicate items numbers! Cannot create a new item of this ID";
+		}
+		
+		currentNode = *currentNode.getNext();
+		count -= 1;
+	}
+	
+	return item(itemNo);
 }
 
-item::item(string name, int itemNo) {
-	this.name = name;
-	this.itemNo = itemNo;
+bool makeItem(std::string name, int itemNo, cllnode inventory) {
+	cllnode currentNode = inventory;
+	int count = inventory.size();
+	
+	bool noDuplicate = true;
+	
+	while (count != 0) {
+		if (currentNode.content.getnumber() != itemNo) {
+			throw "Duplicate items numbers! Cannot create a new item of this ID";
+		}
+		
+		currentNode = *currentNode.getNext();
+		count -= 1;
+	}
+	
+	return item(name, itemNo);
 }
 
-item::item(string name, int itemNo, string description) {
-	this.name = name;
-	this.itemNo = itemNo;
-	this.description = description;
+bool makeItem(int itemNo, std::string description, cllnode inventory) {
+	cllnode currentNode = inventory;
+	int count = inventory.size();
+	
+	bool noDuplicate = true;
+	
+	while (count != 0) {
+		if (currentNode.content.getnumber() != itemNo) {
+			throw "Duplicate items numbers! Cannot create a new item of this ID";
+		}
+		
+		currentNode = *currentNode.getNext();
+		count -= 1;
+	}
+	
+	return item(itemNo, description);
 }
 
-
-// setters
-void setName(string name) {
-	this.name = name;
+bool makeItem(std::string name, int itemNo, std::string description, cllnode inventory) {
+	cllnode currentNode = inventory;
+	int count = inventory.size();
+	
+	while (count != 0) {
+		if (currentNode.content.getnumber() != itemNo) {
+			throw "Duplicate items numbers! Cannot create a new item of this ID";
+		}
+		
+		currentNode = *currentNode.getNext();
+		count -= 1;
+	}
+	
+	return item(name, itemNo, description);
 }
-
-void setNum(int itemNo) {
-	this.itemNo = itemNo;
-}
-
-void setDesc(string description) {
-	this.description = description;
-}
-
-
-// getters
-string getname() {
-	return name;
-}
-
-int getnumber() {
-	return itemNo;
-}
-
-string getdesc() {
-	return description;
-}
+*/
 
 #endif
