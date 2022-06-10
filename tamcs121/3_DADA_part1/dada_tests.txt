@@ -1,0 +1,65 @@
+// amax testcases
+// amax ; x, len ; expected return value
+amax ; , 0 ; -1
+amax ; -6 -2 -5 -9, 4 ; 3
+amax ; 6.5 2.5 8.5 5.5, 4 ; 2
+amax ; -1 0, 2 ; 0
+amax ; 0, 1 ; 0
+amax ; 2 3, 2 ; 1
+amax ; 5, 1 ; 0		
+
+
+// asum testcases
+// asum ; x, len ; expected return value
+asum ; , 0 ; 0
+asum ; -2 -4 -6, 3 ; 12
+asum ; 6.5 2.5 8.5 5.5, 4 ; 23
+asum ; 0 0, 2 ; 0
+
+
+// axpy testcases
+// axpy ; a, x, y, len ; expected y
+axpy ; 1, , , 0 ;
+axpy ; -5, -3 -3 -3, 5 5 5, 3 ; 20 20 20
+axpy ; 2.5, 0.5, -0.25, 1 ; 1
+axpy ; 0, 0 0, 0 0, 2 ; 0 0
+
+
+// copy testcases
+// copy ; x, y, len ; expected y
+copy ; , , 0;
+copy ; -4 -5 -1, -1 -1 -1, 3; -4 -5 -1
+copy ; 3.5 6.5 2.5, 1.5 1.5 1.5, 3; 3.5 6.5 2.5
+
+
+// dot testcases
+// dot ; x, y, len ; expected return value
+dot ; , , 0; 0
+dot ; -1, -1, 1; 1
+dot ; 1.5, 1.5, 1; 2.25
+dot ; 1, -1, 1 ; -2
+dot ; 0, 5, 1 ; 0
+
+
+// norm2 testcases
+// norm2 ; x, len ; expected return value
+norm2 ; , 0; 0
+norm2 ; -1 0, 2; 1
+norm2 ; 0.25 0, 2; 0.25
+norm2 ; 0 0, 2 ; 0
+
+
+// scale testcases
+// scale ; a, x, len ; expected x
+scale ; 1, , 0; 
+scale ; -3, -1 -2 -3, 3 ; 3 6 9
+scale ; 0.5, 2 4 6, 3 ; 1 2 3
+scale ; 0, 0, 1 ; 0
+
+
+// swap testcases
+// swap ; x, y, len ; expected x, expected y
+swap ; , , 0; , 
+swap ; -1 -2 -3, -3 -2 -1, 3 ; -3 -2 -1, -1 -2 -3
+swap ; 1.5 2.5 3.5, 3.5 2.5 1.5, 3 ; 3.5 2.5 1.5, 1.5 2.5 3.5
+

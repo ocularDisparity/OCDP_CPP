@@ -1,0 +1,2 @@
+# Different Digits
+In a distant country, a queen is very superstitious and does not like numbers with repeated digits like 77, 434 or 2121. Thus, she declares any number with repeated digits to be invalid. You have been appointed by Her Majesty to write a program that, given two integers a and b, determines how many valid numbers exist between a and b, inclusive.
