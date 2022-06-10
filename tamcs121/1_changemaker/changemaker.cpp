@@ -1,11 +1,6 @@
 #include <iostream>
 using std::cin; using std::cout; using std::endl;
 
-/*	README:
- *	This program will calculate the minimum amount of coins necessary to fulfill the amount provided by the user.
- *	For example, $2.16 will result in 8 quarters, 1 dime, 1 nickel, and 1 penny, for a grand total of 11 coins.
- */
-
 int main() {
 	// variable declarations
 	int dollars = 0, cents = 0;
